@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>PWA - Features</title>
+        <link rel="manifest" href="manifest.json">
+    </head>
+    <body>
+        <h1>Web App Manifest</h1>
+        <p>An example of manifest file and its usage</p>
+    </body>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator
+                .serviceWorker
+                .register('/sw01.js')
+                .then(()=>console.log("Ready."))
+                .catch(()=>console.log("Err..."));
+            });
+        }
+    </script>
+</html>
