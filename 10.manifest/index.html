@@ -12,7 +12,7 @@
             window.addEventListener('load', function() {
                 navigator
                 .serviceWorker
-                .register('/sw01.js')
+                .register('sw01.js')
                 .then(()=>console.log("Ready."))
                 .catch(()=>console.log("Err..."));
             });
